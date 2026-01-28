@@ -1,4 +1,4 @@
-package estherkpetemey.com.sa_backend;
+package estherkpetemey.com.sa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
