@@ -1,4 +1,4 @@
-package estherkpetemey.com.sa_backend;
+package estherkpetemey.com.sa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
