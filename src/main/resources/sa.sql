@@ -2,7 +2,7 @@ CREATE DATABASE SA;
 
 CREATE TABLE CLIENT (
     ID  integer primary key not null AUTO_INCREMENT,
-    EMAIL varchar(50)
+    EMAIL varchar(50) unique not null
 );
 
 CREATE TABLE SENTIMENT(

@@ -8,8 +8,8 @@
 		<version>4.0.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>estherkpetemey.com</groupId>
-	<artifactId>sa-backend</artifactId>
+	<groupId>tg.otr</groupId>
+	<artifactId>sentiments-otr</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sa-backend</name>
 	<description>API pour analyser les avis utilisateurs</description>
@@ -39,9 +39,21 @@
 			<artifactId>spring-boot-starter-webmvc</artifactId>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>org.mariadb.jdbc</groupId>-->
+<!--			<artifactId>mariadb-java-client</artifactId>-->
+<!--			<scope>runtime</scope>-->
+<!--		</dependency>-->
+		<!-- Source: https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
 		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+<!--			<version>13.3.1.jre11-preview</version>-->
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>

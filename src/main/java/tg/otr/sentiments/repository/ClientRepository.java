@@ -1,6 +1,6 @@
-package estherkpetemey.com.sa.repository;
+package tg.otr.sentiments.repository;
 
-import estherkpetemey.com.sa.entities.Client;
+import tg.otr.sentiments.entity.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClientRepository extends JpaRepository<Client, Integer> {

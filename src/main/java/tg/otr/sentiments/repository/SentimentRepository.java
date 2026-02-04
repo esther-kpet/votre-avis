@@ -1,7 +1,7 @@
-package estherkpetemey.com.sa.repository;
+package tg.otr.sentiments.repository;
 
-import estherkpetemey.com.sa.entities.Sentiment;
-import estherkpetemey.com.sa.enums.TypeSentiment;
+import tg.otr.sentiments.entity.Sentiment;
+import tg.otr.sentiments.enums.TypeSentiment;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package estherkpetemey.com.sa.enums;
+package tg.otr.sentiments.enums;
 
 public enum TypeSentiment {
     POSITIF,
