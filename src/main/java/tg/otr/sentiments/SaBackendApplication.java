@@ -1,4 +1,4 @@
-package estherkpetemey.com.sa;
+package tg.otr.sentiments;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

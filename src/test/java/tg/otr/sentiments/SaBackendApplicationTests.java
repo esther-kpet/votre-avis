@@ -1,4 +1,4 @@
-package estherkpetemey.com.sa;
+package tg.otr.sentiments;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

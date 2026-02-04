@@ -1,6 +1,6 @@
-package estherkpetemey.com.sa.entities;
+package tg.otr.sentiments.entity;
 
-import estherkpetemey.com.sa.enums.TypeSentiment;
+import tg.otr.sentiments.enums.TypeSentiment;
 import jakarta.persistence.*;
 
 import static jakarta.persistence.CascadeType.MERGE;

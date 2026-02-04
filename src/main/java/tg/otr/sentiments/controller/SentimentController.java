@@ -1,10 +1,9 @@
-package estherkpetemey.com.sa.controller;
+package tg.otr.sentiments.controller;
 
-import estherkpetemey.com.sa.entities.Sentiment;
-import estherkpetemey.com.sa.enums.TypeSentiment;
-import estherkpetemey.com.sa.service.SentimentService;
+import tg.otr.sentiments.entity.Sentiment;
+import tg.otr.sentiments.enums.TypeSentiment;
+import tg.otr.sentiments.service.SentimentService;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,21 +22,21 @@ public class SentimentController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(consumes = APPLICATION_JSON_VALUE)
-    public void creer (@RequestBody Sentiment sentiment) {
-        this.sentimentService.creer(sentiment);
+    public void create (@RequestBody Sentiment sentiment) {
+        this.sentimentService.create(sentiment);
 
     }
 
     @GetMapping
-    public @ResponseBody List<Sentiment> rechercher(@RequestParam(required = false) TypeSentiment type){
-        return this.sentimentService.rechercher(type);
+    public @ResponseBody List<Sentiment> research(@RequestParam(required = false) TypeSentiment type){
+        return this.sentimentService.research(type);
 
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping(path= "{id}")
-    public void supprimer (@PathVariable Integer id) {
-        this.sentimentService.supprimer(id);
+    public void delete (@PathVariable Integer id) {
+        this.sentimentService.delete(id);
 
     }
 }

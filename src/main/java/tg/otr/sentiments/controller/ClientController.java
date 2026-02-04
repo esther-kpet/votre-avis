@@ -1,7 +1,7 @@
-package estherkpetemey.com.sa.controller;
+package tg.otr.sentiments.controller;
 
-import estherkpetemey.com.sa.entities.Client;
-import estherkpetemey.com.sa.service.ClientService;
+import tg.otr.sentiments.entity.Client;
+import tg.otr.sentiments.service.ClientService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +10,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(path= "client")
+@RequestMapping(path= "clients")
 public class ClientController {
     private ClientService clientService;
 
@@ -20,25 +20,25 @@ public class ClientController {
 
     @ResponseStatus(value = HttpStatus.CREATED)
     @PostMapping(consumes = APPLICATION_JSON_VALUE)
-    public void creer(@RequestBody Client client) {
-        this.clientService.creer(client);
+    public void create(@RequestBody Client client) {
+        this.clientService.create(client);
 
     }
 
     @GetMapping(produces = APPLICATION_JSON_VALUE)
-    public List<Client> rechercher() {
-        return this.clientService.rechercher();
+    public List<Client> research() {
+        return this.clientService.research();
     }
 
     @GetMapping(path="{id}", produces = APPLICATION_JSON_VALUE)
-    public Client lire(@PathVariable Integer id) {
-        return this.clientService.lire(id);
+    public Client read(@PathVariable Integer id) {
+        return this.clientService.read(id);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping(path="{id}", consumes = APPLICATION_JSON_VALUE)
-    public void modifier(@PathVariable Integer id, @RequestBody Client client){
-        this.clientService.modifier(id, client);
+    public void modify(@PathVariable Integer id, @RequestBody Client client){
+        this.clientService.modify(id, client);
 
     }
 }

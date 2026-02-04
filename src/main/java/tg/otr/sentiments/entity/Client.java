@@ -1,4 +1,4 @@
-package estherkpetemey.com.sa.entities;
+package tg.otr.sentiments.entity;
 
 import jakarta.persistence.*;
 

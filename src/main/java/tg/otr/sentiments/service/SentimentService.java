@@ -1,9 +1,9 @@
-package estherkpetemey.com.sa.service;
+package tg.otr.sentiments.service;
 
-import estherkpetemey.com.sa.entities.Client;
-import estherkpetemey.com.sa.entities.Sentiment;
-import estherkpetemey.com.sa.enums.TypeSentiment;
-import estherkpetemey.com.sa.repository.SentimentRepository;
+import tg.otr.sentiments.entity.Client;
+import tg.otr.sentiments.entity.Sentiment;
+import tg.otr.sentiments.enums.TypeSentiment;
+import tg.otr.sentiments.repository.SentimentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,8 +19,8 @@ public class SentimentService {
         this.sentimentRepository = sentimentRepository;
     }
 
-    public void creer(Sentiment sentiment){
-        Client client = this.clientService.lireOuCreer(sentiment.getClient());
+    public void create(Sentiment sentiment){
+        Client client = this.clientService.readOrCreate(sentiment.getClient());
         sentiment.setClient(client);
 
         //Analyse
@@ -31,7 +31,7 @@ public class SentimentService {
         this.sentimentRepository.save(sentiment);
     }
 
-    public List<Sentiment> rechercher(TypeSentiment type) {
+    public List<Sentiment> research(TypeSentiment type) {
         if(type == null){
             return this.sentimentRepository.findAll();
         } else {
@@ -39,7 +39,7 @@ public class SentimentService {
         }
     }
 
-    public void supprimer(Integer id) {
+    public void delete(Integer id) {
         this.sentimentRepository.deleteById(id);
     }
 }
