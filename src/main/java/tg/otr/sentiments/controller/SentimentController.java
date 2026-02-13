@@ -11,7 +11,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(path= "sentiment", produces = APPLICATION_JSON_VALUE)
+@RequestMapping(path= "sentiments", produces = APPLICATION_JSON_VALUE)
 public class SentimentController {
 
     private SentimentService sentimentService;

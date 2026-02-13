@@ -13,6 +13,7 @@ public class Sentiment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String texte;
+    @Enumerated(EnumType.STRING)
     private TypeSentiment type;
 
     @ManyToOne(cascade = {PERSIST, MERGE})

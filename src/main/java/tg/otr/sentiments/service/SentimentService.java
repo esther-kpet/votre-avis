@@ -20,6 +20,9 @@ public class SentimentService {
     }
 
     public void create(Sentiment sentiment){
+        if (sentiment.getClient() == null || sentiment.getClient().getEmail() == null) {
+            throw new IllegalArgumentException("Le sentiment doit être associé à un client avec un email.");
+        }
         Client client = this.clientService.readOrCreate(sentiment.getClient());
         sentiment.setClient(client);
 

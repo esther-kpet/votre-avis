@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>tg.otr</groupId>
 	<artifactId>sentiments-otr</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>sa-backend</name>
 	<description>API pour analyser les avis utilisateurs</description>
 	<url/>
